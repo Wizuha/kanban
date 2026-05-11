@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run dev:back\" \"npm run dev:front\"",
-    "dev:back": "nodemon app/server/index.js",
+    "dev:back": "nodemon server/index.js",
     "dev:front": "vite",
     "build": "vite build",
-    "test": "vitest"
+    "test": "vitest",
+    "seed": "node server/config/seed.js"
   },
   "dependencies": {
     "better-sqlite3": "^12.9.0",
@@ -19,7 +20,8 @@
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "sequelize": "^6.37.8",
-    "sequelize-pool": "^8.0.1"
+    "sequelize-pool": "^8.0.1",
+    "sqlite3": "^6.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
